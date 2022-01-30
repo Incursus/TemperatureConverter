@@ -1,0 +1,15 @@
+/Users/redaskriksciukaitis/repos/TemperatureConverter/TemperatureConverter/bin/Debug/net6.0/TemperatureConverter
+/Users/redaskriksciukaitis/repos/TemperatureConverter/TemperatureConverter/bin/Debug/net6.0/TemperatureConverter.deps.json
+/Users/redaskriksciukaitis/repos/TemperatureConverter/TemperatureConverter/bin/Debug/net6.0/TemperatureConverter.runtimeconfig.json
+/Users/redaskriksciukaitis/repos/TemperatureConverter/TemperatureConverter/bin/Debug/net6.0/TemperatureConverter.dll
+/Users/redaskriksciukaitis/repos/TemperatureConverter/TemperatureConverter/bin/Debug/net6.0/ref/TemperatureConverter.dll
+/Users/redaskriksciukaitis/repos/TemperatureConverter/TemperatureConverter/bin/Debug/net6.0/TemperatureConverter.pdb
+/Users/redaskriksciukaitis/repos/TemperatureConverter/TemperatureConverter/obj/Debug/net6.0/TemperatureConverter.csproj.AssemblyReference.cache
+/Users/redaskriksciukaitis/repos/TemperatureConverter/TemperatureConverter/obj/Debug/net6.0/TemperatureConverter.GeneratedMSBuildEditorConfig.editorconfig
+/Users/redaskriksciukaitis/repos/TemperatureConverter/TemperatureConverter/obj/Debug/net6.0/TemperatureConverter.AssemblyInfoInputs.cache
+/Users/redaskriksciukaitis/repos/TemperatureConverter/TemperatureConverter/obj/Debug/net6.0/TemperatureConverter.AssemblyInfo.cs
+/Users/redaskriksciukaitis/repos/TemperatureConverter/TemperatureConverter/obj/Debug/net6.0/TemperatureConverter.csproj.CoreCompileInputs.cache
+/Users/redaskriksciukaitis/repos/TemperatureConverter/TemperatureConverter/obj/Debug/net6.0/TemperatureConverter.dll
+/Users/redaskriksciukaitis/repos/TemperatureConverter/TemperatureConverter/obj/Debug/net6.0/ref/TemperatureConverter.dll
+/Users/redaskriksciukaitis/repos/TemperatureConverter/TemperatureConverter/obj/Debug/net6.0/TemperatureConverter.pdb
+/Users/redaskriksciukaitis/repos/TemperatureConverter/TemperatureConverter/obj/Debug/net6.0/TemperatureConverter.genruntimeconfig.cache
