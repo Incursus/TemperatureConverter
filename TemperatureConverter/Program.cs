@@ -4,7 +4,7 @@ var type = typeof(ITemperature);
 var types = AppDomain.CurrentDomain.GetAssemblies()
     .SelectMany(s => s.GetTypes())
     .Where(p => type.IsAssignableFrom(p) && p.IsClass);
-List<ITemperature> temperatures = types.Select(Activator.CreateInstance).OfType<ITemperature>().ToList();
+var temperatures = types.Select(Activator.CreateInstance).OfType<ITemperature>().ToList();
 
 Console.WriteLine($"Hello, please enter your temperature type: {string.Join(",", temperatures.Select(x => x.Code))}");
 var inputType = Console.ReadLine();
