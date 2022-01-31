@@ -6,9 +6,14 @@
 
 // Example Farenheit 451
 
-Console.WriteLine("Hello, please enter your temperature in [number][temperature] format!");
+using TemperatureConverter;
 
-var userInput = Console.ReadLine();
+Console.WriteLine($"Hello, please enter your temperature type: K C or F");
+var temperatureType = Console.ReadLine();
 
-// Parse last character of userinput
-var userInputTemperatureParsed = userInput.Substring(userInput.Length);
+Console.WriteLine($"Please enter your temperature value");
+double temperatureValue = Convert.ToDouble(Console.ReadLine());
+
+var celsius = new Celsius();
+Console.WriteLine($"C to F = {celsius.ConvertToFahrenheit(temperatureValue)}");
+Console.WriteLine($"C to K = {celsius.ConvertToKelvin(temperatureValue)}");
