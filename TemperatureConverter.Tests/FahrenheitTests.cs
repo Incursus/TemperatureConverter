@@ -19,7 +19,7 @@ public class FahrenheitTests
     {
         var result = fahrenheit.ConvertToKelvin(451);
 
-        result.Should().Be(506.27777777777777777777777780M);
+        result.Should().Be(506.28M);
     }
     
     [TestMethod]
@@ -35,6 +35,6 @@ public class FahrenheitTests
     {
         var result = fahrenheit.ConvertToCelsius(451);
 
-        result.Should().Be(232.77777777777777777777777778M);
+        result.Should().Be(232.78M);
     }
 }

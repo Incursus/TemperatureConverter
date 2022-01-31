@@ -1,3 +1,5 @@
+using System;
+
 namespace TemperatureConverter;
 
 public class Fahrenheit : ITemperature
@@ -6,16 +8,16 @@ public class Fahrenheit : ITemperature
 
     public decimal ConvertToCelsius(decimal value)
     {
-        return (value - 32) * 5 / 9;
+        return Convert.ToDecimal(((value - 32) * 5 / 9).ToString("0.00"));
     }
 
     public decimal ConvertToKelvin(decimal value)
     {
-        return 273.5M + (value - 32.0M) * (5.0M / 9.0M);
+        return Convert.ToDecimal((273.5M + (value - 32.0M) * (5.0M / 9.0M)).ToString("0.00"));
     }
 
     public decimal ConvertToFahrenheit(decimal value)
     {
-        return value;
+        return Convert.ToDecimal(value.ToString("0.00"));
     }
 }
