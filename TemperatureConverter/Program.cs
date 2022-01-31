@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using TemperatureConverter;
+﻿using TemperatureConverter;
 
 var type = typeof(ITemperature);
 var types = AppDomain.CurrentDomain.GetAssemblies()

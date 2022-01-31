@@ -1,5 +1,3 @@
-using System;
-
 namespace TemperatureConverter;
 
 public class Kelvin : ITemperature
@@ -7,16 +5,16 @@ public class Kelvin : ITemperature
     public string Code => "K";
     public decimal ConvertToCelsius(decimal value)
     {
-        return Convert.ToDecimal((value - 273.15M).ToString("0.00"));
+        return Math.Round(value - 273.15M, 2);
     }
 
     public decimal ConvertToKelvin(decimal value)
     {
-        return Convert.ToDecimal(value.ToString("0.00"));
+        return Math.Round(value, 2);
     }
 
     public decimal ConvertToFahrenheit(decimal value)
     {
-        return Convert.ToDecimal(((value - 273.15M) * 1.8M + 32).ToString("0.00"));
+        return Math.Round((value - 273.15M) * 1.8M + 32, 2);
     }
 }
