@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemperatureConverter", "TemperatureConverter\TemperatureConverter.csproj", "{5015FF0D-3D7D-4A4A-994C-85DC0B9E0C61}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemperatureConverter.Tests", "TemperatureConverter.Tests\TemperatureConverter.Tests.csproj", "{230FC38A-F759-4E32-A321-009ABD102FE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{5015FF0D-3D7D-4A4A-994C-85DC0B9E0C61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5015FF0D-3D7D-4A4A-994C-85DC0B9E0C61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5015FF0D-3D7D-4A4A-994C-85DC0B9E0C61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{230FC38A-F759-4E32-A321-009ABD102FE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{230FC38A-F759-4E32-A321-009ABD102FE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{230FC38A-F759-4E32-A321-009ABD102FE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{230FC38A-F759-4E32-A321-009ABD102FE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
