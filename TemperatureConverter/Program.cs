@@ -16,9 +16,9 @@ if (foundTemperature != null)
     Console.WriteLine("Please enter value:");
     var userInputDecimal = Convert.ToDecimal(Console.ReadLine());
 
-    Console.WriteLine($"{foundTemperature.Code} to C = {foundTemperature.ConvertToCelsius(userInputDecimal)}");
-    Console.WriteLine($"{foundTemperature.Code} to K = {foundTemperature.ConvertToKelvin(userInputDecimal)}");
-    Console.WriteLine($"{foundTemperature.Code} to F = {foundTemperature.ConvertToFahrenheit(userInputDecimal)}");
+    Console.WriteLine($"{foundTemperature.Code} to C = {foundTemperature.ConvertToCelsius(userInputDecimal)}°C");
+    Console.WriteLine($"{foundTemperature.Code} to K = {foundTemperature.ConvertToKelvin(userInputDecimal)} K");
+    Console.WriteLine($"{foundTemperature.Code} to F = {foundTemperature.ConvertToFahrenheit(userInputDecimal)}°F");
 }
 else
 {
