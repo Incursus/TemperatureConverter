@@ -1,19 +1,26 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using TemperatureConverter;
 
-// Greta - trys objektai - F, K, C pačioj klasėj keist informaciją.
-// User input - [number][K, C, F], pagal tai sumatchina ir konvertuoja į kitas temperatūras
-// Temperature class as base 
+var type = typeof(ITemperature);
+var types = AppDomain.CurrentDomain.GetAssemblies()
+    .SelectMany(s => s.GetTypes())
+    .Where(p => type.IsAssignableFrom(p) && p.IsClass);
+List<ITemperature> temperatures = types.Select(Activator.CreateInstance).OfType<ITemperature>().ToList();
 
-// Example Farenheit 451
+Console.WriteLine($"Hello, please enter your temperature type: {string.Join(",", temperatures.Select(x => x.Code))}");
+var inputType = Console.ReadLine();
 
-using TemperatureConverter;
+var foundTemperature = temperatures.FirstOrDefault(x => x.Code == inputType);
 
-Console.WriteLine($"Hello, please enter your temperature type: K C or F");
-var temperatureType = Console.ReadLine();
+if (foundTemperature != null)
+{
+    Console.WriteLine("Please enter value:");
+    var userInputDecimal = Convert.ToDecimal(Console.ReadLine());
 
-Console.WriteLine($"Please enter your temperature value");
-double temperatureValue = Convert.ToDouble(Console.ReadLine());
-
-var celsius = new Celsius();
-Console.WriteLine($"C to F = {celsius.ConvertToFahrenheit(temperatureValue)}");
-Console.WriteLine($"C to K = {celsius.ConvertToKelvin(temperatureValue)}");
+    Console.WriteLine($"{foundTemperature.Code} to C = {foundTemperature.ConvertToCelsius(userInputDecimal)}");
+    Console.WriteLine($"{foundTemperature.Code} to K = {foundTemperature.ConvertToKelvin(userInputDecimal)}");
+    Console.WriteLine($"{foundTemperature.Code} to F = {foundTemperature.ConvertToFahrenheit(userInputDecimal)}");
+}
+else
+{
+    Console.WriteLine("No temperature type found");
+}

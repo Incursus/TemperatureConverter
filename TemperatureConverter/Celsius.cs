@@ -2,17 +2,19 @@ namespace TemperatureConverter;
 
 public class Celsius : ITemperature
 {
-    public double ConvertToCelsius(double temperatureValue)
+    public string Code => "C";
+
+    public decimal ConvertToCelsius(decimal value)
     {
-        return temperatureValue;
+        return value;
     }
 
-    public double ConvertToKelvin(double value)
+    public decimal ConvertToKelvin(decimal value)
     {
-        return value + 273.15;
+        return value + 273.15M;
     }
 
-    public double ConvertToFahrenheit(double value)
+    public decimal ConvertToFahrenheit(decimal value)
     {
         return value * 9 / 5 + 32;
     }

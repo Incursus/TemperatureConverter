@@ -2,18 +2,20 @@ namespace TemperatureConverter;
 
 public class Fahrenheit : ITemperature
 {
-    public double ConvertToCelsius(double temperatureValue)
+    public string Code => "F";
+
+    public decimal ConvertToCelsius(decimal value)
     {
-        return (temperatureValue - 32) * 5 / 9;
+        return (value - 32) * 5 / 9;
     }
 
-    public double ConvertToKelvin(double value)
+    public decimal ConvertToKelvin(decimal value)
     {
-        throw new NotImplementedException();
+        return 273.5M + (value - 32.0M) * (5.0M / 9.0M);
     }
 
-    public double ConvertToFahrenheit(double value)
+    public decimal ConvertToFahrenheit(decimal value)
     {
-        throw new NotImplementedException();
+        return value;
     }
 }
