@@ -1,24 +1,23 @@
 ﻿using TemperatureConverter;
 
-var type = typeof(ITemperature);
-var types = AppDomain.CurrentDomain.GetAssemblies()
-    .SelectMany(s => s.GetTypes())
-    .Where(p => type.IsAssignableFrom(p) && p.IsClass);
-var temperatures = types.Select(Activator.CreateInstance).OfType<ITemperature>().ToList();
+var converterBuilder = new TemperatureConverterBuilder();
+var converters = converterBuilder.GetAll();
 
-Console.WriteLine($"Hello, please enter your temperature type: {string.Join(",", temperatures.Select(x => x.Code))}");
-var inputType = Console.ReadLine();
+Console.WriteLine($"Hello, please enter your FROM temperature type: {string.Join(",", converters.Select(x => x.FromCode).ToHashSet())}");
+var inputTypeFrom = Console.ReadLine();
 
-var foundTemperature = temperatures.FirstOrDefault(x => x.Code == inputType);
+Console.WriteLine($"Enter your TO temperature type: {string.Join(",", converters.Select(x => x.FromCode).ToHashSet())}");
+var inputTypeTo = Console.ReadLine();
 
-if (foundTemperature != null)
+var temperaturePrinter = new TemperatureConverterResolver();
+var converter = temperaturePrinter.Get(converters, inputTypeFrom, inputTypeTo);
+
+if (converter != null)
 {
     Console.WriteLine("Please enter value:");
     var userInputDecimal = Convert.ToDecimal(Console.ReadLine());
 
-    Console.WriteLine($"{foundTemperature.Code} to C = {foundTemperature.ConvertToCelsius(userInputDecimal)}°C");
-    Console.WriteLine($"{foundTemperature.Code} to K = {foundTemperature.ConvertToKelvin(userInputDecimal)} K");
-    Console.WriteLine($"{foundTemperature.Code} to F = {foundTemperature.ConvertToFahrenheit(userInputDecimal)}°F");
+    Console.WriteLine($"{converter.FromCode} to {converter.ToCode} = {converter.Convert(userInputDecimal)}");
 }
 else
 {
